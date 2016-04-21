@@ -1,0 +1,26 @@
+{
+  "name": "cryptoprob",
+  "version": "1.0.0",
+  "description": "Elements of the theory of probability in cryptanalysis",
+  "main": "core.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrodoTheTrue/cryptoprob.git"
+  },
+  "keywords": [
+    "crypto",
+    "cryptanalysis"
+  ],
+  "author": "Fedor Isakov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrodoTheTrue/cryptoprob/issues"
+  },
+  "homepage": "https://github.com/FrodoTheTrue/cryptoprob#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
