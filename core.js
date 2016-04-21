@@ -92,6 +92,7 @@ for (var i=0; i<keys.length; i++) {
     // в Ki - K(c)
     var nonKi = [];
     for (var j=0; j< keys.length; j++) {
+        nonKi = [];
         if (i != j) {
             for (var k=0;k<cryptotableColumns.length;k++) {
                 if (cryptotableColumns[k].indexOf(keys[j]) > -1) {
@@ -102,20 +103,17 @@ for (var i=0; i<keys.length; i++) {
             // посчитали здесь K(c')
             // теперь посчитаем их пересечение
             
-            var peres = new Set(Ki);
+            var set1 = new Set(Ki);
             
-            for (var z=0;z<Ki.length;z++) {
-                peres.add(Ki[z]);
-            }
-            
-            for (var z=0;z<nonKi.length;z++) {
-                if (!peres.has(nonKi[z])) {
-                    peres.delete(nonKi[z]);
-                }
-            }
+            var set2 = new Set(nonKi);
+
+            var peres = new Set(
+                [...set1].filter(x => set2.has(x)));
+
             if (Ki.length == 0) {
                 Ki += 1;
             }
+                
             if (peres.size / Ki.length > resIt) {
                 resIt = peres.size / Ki.length;
                 maxCh = peres.size;
@@ -139,4 +137,4 @@ if (maxCh / NOD == 1 && minZn / NOD == 1) {
     console.log("P( атаки подмены ) = 1");
 } else {
     console.log("P( атаки подмены ) = " + maxCh / NOD + " / " + minZn / NOD);
-}
+};
