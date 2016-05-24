@@ -9,7 +9,7 @@ function hasDuplicate(arr){
 function K(key, keys, cryptotableColumns) {
     var localMax = 0;
     for (var j=0;j<cryptotableColumns.length;j++) {
-        if (cryptotableColumns[j].indexOf(keys[i]) > -1) {
+        if (cryptotableColumns[j].indexOf(key) > -1) {
             localMax += 1;
         }
     }
@@ -47,8 +47,10 @@ for (var i = 0;i < keys.length; i++) {
     }
     cryptotableColumns.push(tmpArray);
 }
+
+
 console.log("Результаты: ");
-console.log("============")
+console.log("============");
 if (!hasDuplicate(cryptotableColumns)) {
     console.log(" * Данная таблица задает функцию шифрования");
 } else {

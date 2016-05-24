@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Криптография</title>
+    <link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.css">
+    <link rel="stylesheet" href="/cryptotable/cryptotable.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="../" class="navbar-brand">Криптография</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="bs-docs-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1 id="forms" style="margin-top: 70px">Вычисление вероятности атаки имитации и атаки подмены</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="input-group col-lg-6" style="margin: 20px;">
+                <span class="input-group-addon" id="basic-addon1">Число ключей (коль-во столбцов)</span>
+                <input id="countCols" type="text" class="form-control" placeholder="5" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group col-lg-6" style="margin: 20px;">
+                <span class="input-group-addon" id="basic-addon1">Число открытых текстов (коль-во строк)</span>
+                <input id="countRows" type="text" class="form-control" placeholder="4" aria-describedby="basic-addon1">
+            </div>
+            <table style="margin: 20px;">
+                <tbody id="mainTBody">
+
+                </tbody>
+            </table>
+        </div>
+        <button id="calculate" type="button" class="btn btn-success">Вычислить вероятности</button>
+        <div id="result" class="row" style="margin: 20px; font-size: 25px">
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/cryptotable/cryptotable.js"></script>
+</body>
+</html>
